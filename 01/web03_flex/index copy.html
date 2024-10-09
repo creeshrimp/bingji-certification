@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校園社團介紹網</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* container */
+            --container_w: 1000px;
+            --container_h: 100%;
+
+            /* top */
+            --top_h: 65px;
+
+            /* left */
+            --left_w: 215px;
+            --update_h: 25px;
+
+            /* right */
+            --right_w: 770px;
+            --marquee_h: 29px;
+
+            /* footer */
+            --footer_w: 100%;
+            --footer_h: 20px;
+        }
+
+        #main {
+            width: 1024px;
+            height: 768px;
+            margin: auto;
+            background-color: #ffffff;
+            border: 1px solid #9e9e9e;
+        }
+
+        #container {
+            width: var(--container_w);
+            height: var(--container_h);
+        }
+
+        #top {
+            width: 100%;
+            height: var(--top_h);
+            margin: auto;
+            background-color: rgb(247, 144, 229);
+        }
+
+        #left {
+            width: 215px;
+            height: 683px;
+            background-color: saddlebrown;
+            float: left;
+            margin-left: 12px;
+        }
+
+        #right {
+            width: 770px;
+            height: 683px;
+            background-color: rgb(144, 247, 166);
+
+            float: right;
+            margin-right: 12px;
+
+        }
+
+        #footer {
+            width: 1000px;
+            height: 20px;
+            background-color: rgb(189, 205, 255);
+            margin: auto;
+            text-align: center;
+
+            /* 一些要求 */
+            font-family: '標楷體';
+            color: #000000;
+            text-align: center;
+            font-size: 16px;
+
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="container">
+            <div id="top"></div>
+
+            <div id="left">
+                <div id="menu"></div>
+                <div id="update"></div>
+            </div>
+
+            <div id="right">
+                <marquee></marquee>
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+            <div id="footer">網頁設計及維護：03許峻耀</div>
+        </div>
+    </div>
+</body>
+
+</html>
