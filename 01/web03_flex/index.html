@@ -33,7 +33,6 @@
 
             display: grid;
 
-            /* grid-template-columns: 1fr 1fr 1fr; */
             grid-template-columns: 215px 1fr 770px;
             grid-template-rows: 65px 29px 1fr 25px 20px
         }
@@ -81,6 +80,11 @@
             font-size: 24px;
             color: #0000FF;
         }
+
+        #menu {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 
@@ -90,7 +94,10 @@
             <div id="top">
                 <a href="index.html"><img src="images/logo.png" alt=""></a>
             </div>
-            <div id="menu"></div>
+            <div id="menu">
+                <u>社團介紹</u>
+
+            </div>
             <div id="update"></div>
             <div id="marquee">
                 <marquee>歡迎光臨校園社團介紹網，參觀後請支持社團活 動並熱烈參與</marquee>
