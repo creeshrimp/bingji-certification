@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Layout */
+        #main {
+            /* background: #252525; */
+            width: 1024px;
+            height: 768px;
+            margin: auto;
+
+            border: 1px solid;
+        }
+
+        #container {
+            /* background: #d6d6d6; */
+            width: 1000px;
+            height: 100%;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 65px 29px 1fr 20px;
+        }
+
+        #top {
+            background: #0000FF;
+            grid-column: 1 / -1;
+            grid-row: span 1;
+        }
+
+        #menu {
+            background: #00FFFF;
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+
+        #marquee {
+            /* background: #FF00FF; */
+            grid-column: 2 / 3;
+            grid-row: span 1;
+        }
+
+        #content {
+            background: #FFFF00;
+            grid-column: 2 / -1;
+            grid-row: 3 / 4;
+        }
+
+        #footer {
+            background: #FF0000;
+            grid-column: 1 / -1;
+            grid-row: -2 / -1;
+        }
+
+        /* 內容排版 */
+
+        #top {
+            text-align: center;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        #menu {
+            text-align: center;
+
+            table {
+                margin: auto;
+            }
+
+            img {
+                width: 120px;
+                height: 40px;
+                cursor: pointer;
+            }
+
+            img:hover {
+                filter: hue-rotate(180deg) brightness(90%);
+            }
+        }
+
+        #marquee {
+            line-height: 29px;
+        }
+
+        #content {
+            background: url(images/park0301.jpg);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main">
+        <div id="container">
+            <div id="top"><a href="index.html"><img src="images/park0309.gif" alt="park0309.gif"></a></div>
+            <div id="menu">
+                <table border="0">
+                    <tr>
+                        <td>
+                            <a href="">
+                                <img src="images/park0302.jpg" alt="陽明山國家公園" title="陽明山國家公園">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">
+                                <img src="images/park0303.jpg" alt="雪霸國家公園" title="雪霸國家公園">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">
+                                <img src="images/park0304.jpg" alt="太魯閣國家公園" title="太魯閣國家公園">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">
+                                <img src="images/park0305.jpg" alt="玉山國家公園" title="玉山國家公園">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <p><a href="others/park.mp3" download="">檔案下載</a></p>
+
+            </div>
+            <div id="marquee">
+                <marquee>歡迎進入國家公園介紹網，本網站有詳細的國家公園介紹哦！</marquee>
+            </div>
+            <div id="content">
+                <img src="images/national_park.jpg" alt="" usemap="#Map">
+                <map name="Map">
+                    <area shape="circle" coords="292,203,24" href="park/sheipa.html">
+                </map>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </main>
+
+    <script>
+        const mapImg = document.querySelector('#content>img');
+        mapImg.addEventListener('click', function (event) {
+            const rect = mapImg.getBoundingClientRect();
+            console.log(`X: ${event.clientX - rect.left}, Y: ${event.clientY - rect.top}`);
+        });
+    </script>
+</body>
+
+</html>
