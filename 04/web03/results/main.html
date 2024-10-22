@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main.html</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #news,
+        #imgs {
+            height: 460px;
+            border: 1px solid #999999;
+        }
+
+        /* 最新消息 */
+        #news {
+            width: 280px;
+            padding: 0.4rem;
+
+            h2 {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+
+                tr {
+                    th {
+                        background-color: #3399FF;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        text-align: center;
+                    }
+
+                    td {
+                        font-size: 12px;
+                        line-height: 2;
+                    }
+
+                    td:nth-child(2) {
+                        text-align: end;
+                    }
+                }
+
+                /* tr 背景色 */
+                tr {
+                    background-color: #DDDDDD;
+                }
+
+                tr:nth-child(2n) {
+                    background-color: #FFFFCC;
+                }
+            }
+        }
+
+        /* 圖片展示區 */
+        #imgs {
+            width: 590px;
+            padding: 0.5rem;
+            background-color: #333333;
+
+            display: flex;
+            flex-direction: column;
+
+            #big {
+                width: 100%;
+                max-height: 364px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            #small {
+                display: flex;
+                justify-content: space-between;
+
+                height: calc(460px - 364px - 1rem);
+                padding: 0.5rem;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="news">
+        <h2>最新消息</h2>
+        <table border="0">
+            <tr>
+                <th>主題</th>
+                <th>發布日期</th>
+            </tr>
+            <tr>
+                <td><img src="../images/0201.png">公告全國技能競賽相關事宜</td>
+                <td>113/11/08</td>
+            </tr>
+            <tr>
+                <td><img src="../images/0201.png">公告即測即評及發證相關事宜</td>
+                <td>113/11/08</td>
+            </tr>
+            <tr>
+                <td><img src="../images/0201.png">公告網頁設計修題相關事宜</td>
+                <td>113/11/08</td>
+            </tr>
+            <tr>
+                <td><img src="../images/0201.png">公告網路架設應檢相關事宜</td>
+                <td>113/11/08</td>
+            </tr>
+        </table>
+    </div>
+    <div id="imgs">
+        <div id="big">
+            <img src="../images/0202A.png" alt="0202A.png">
+        </div>
+        <div id="small">
+            <img src="../images/0202A.png" alt="0202A.png">
+            <img src="../images/0203A.png" alt="0203A.png">
+            <img src="../images/0204A.png" alt="0204A.png">
+            <img src="../images/0205A.png" alt="0205A.png">
+
+        </div>
+    </div>
+</body>
+
+</html>
