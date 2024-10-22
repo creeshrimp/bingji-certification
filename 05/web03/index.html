@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舒曼的旅遊相簿</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* layout */
+
+        #main {
+            width: 1024px;
+            height: 768px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 50px 1fr;
+        }
+
+        #menu {
+            grid-column: 1 / 2;
+            grid-row: 1 / -1;
+
+            /* background-color: rgb(166, 99, 228); */
+        }
+
+        #marquee {
+            grid-column: 2 / -1;
+            grid-row: 1 / 2;
+
+            /* background-color: aqua; */
+        }
+
+        #content {
+            grid-column: 2 / -1;
+            grid-row: 2 / -1;
+
+            /* background-color: rgb(207, 171, 146); */
+        }
+
+        /* style */
+        body {
+            background: #333333;
+        }
+
+        #main {
+            background: #FFFFCC;
+        }
+
+        #menu {
+            table {
+                margin: auto;
+            }
+
+            .mantain {
+                font-size: 12px;
+                font-weight: bold;
+                font-family: '新細明體';
+                color: #FF0000;
+                text-align: center;
+            }
+        }
+
+        #marquee {
+
+            marquee {
+                font-size: 24px;
+                font-family: '標楷體';
+                font-weight: bold;
+                color: #FF0000;
+                line-height: 50px;
+            }
+        }
+
+        #content {
+            padding: 36px;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main">
+        <div id="menu">
+            <table>
+                <tr>
+                    <td>
+                        <img src="images/0508.gif" alt="書曼的旅遊相簿" title="書曼的旅遊相簿">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/0507.jpg" alt="書曼" title="書曼">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="hover_to_red" src="images/0501b.gif" alt="金門逍遙遊" title="金門逍遙遊">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="hover_to_red" src="images/0502b.gif" alt="卡蹓到馬祖" title="卡蹓到馬祖">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="hover_to_red" src="images/0503b.gif" alt="踏浪澎湖行" title="踏浪澎湖行">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="hover_to_red" src="images/0504b.gif" alt="綠島唱夜曲" title="綠島唱夜曲">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="album5/album5.html">
+                            <img class="hover_to_red" src="images/0505b.gif" alt="蘭嶼賞魚去" title="蘭嶼賞魚去">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="mantain">
+                        日期：2024/11/08 <br>
+                        維護：03許峻耀
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="index.html">
+                            <img class="hover_to_red" src="images/0506b.gif" alt="回首頁" title="回首頁">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="marquee">
+            <marquee>歡迎來到書曼的旅遊相簿，本網站有我的旅遊影像紀錄介紹耶！</marquee>
+        </div>
+        <div id="content">
+            <iframe src="main.html" frameborder="0"></iframe>
+        </div>
+    </main>
+
+    <script src="jquery-2.1.4.min.js"></script>
+    <script>
+        console.log($('#menu img'))
+
+        $('.hover_to_red').hover(function () {
+            $(this).attr('src', $(this).attr('src').replace('b', 'r'))
+        }, function () {
+            $(this).attr('src', $(this).attr('src').replace('r', 'b'))
+        })
+    </script>
+</body>
+
+</html>

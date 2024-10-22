@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            margin: auto;
+            padding: 0;
+            width: fit-content;
+
+            position: relative;
+        }
+
+        .box {
+            width: 5px;
+            height: 5px;
+            background-color: red;
+            position: absolute;
+            left: 420px;
+            top: 7px;
+        }
+
+        .box4 {
+            width: 5px;
+            height: 5px;
+            background-color: red;
+            position: absolute;
+            left: 610px;
+            top: 157px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- 完美的影像地圖 -->
+        <img id="img0510a" src="images/0510a.gif" alt="0510a.gif" usemap="#Map">
+        <map name="Map">
+            <area shape="rect" coords="420,7,610,157" href="album5/album5.html" alt="album5">
+        </map>
+
+        <div class="box"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+
+</html>
