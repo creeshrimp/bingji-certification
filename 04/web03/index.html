@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,97 +14,63 @@
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            display: flex;
         }
 
-        /*
-            ----------------------  layout  ----------------------
-        */
+        /* ------------ layout ------------- */
+
         #main {
-            background-color: rgb(219, 219, 219);
+            background: #e6e6e6;
             width: 1024px;
             height: 768px;
-
             margin: auto;
 
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 90px 25px 1fr 45px;
+            grid-template-rows: 120px 30px 1fr 78px;
+
+
+            #top,
+            #marquee,
+            #content,
+            #footer {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
         }
+
+
+        /* ------------ styles ------------- */
 
         #top {
-            background-color: #00B0F0;
-            grid-row: span 1;
-        }
+            background: url(images/0401.jpg);
 
-        #menu {
-            background-color: cornflowerblue;
-            grid-row: span 1;
-        }
-
-        #content {
-            background-color: #FFFFFF;
-            grid-row: span 1;
-        }
-
-        #footer {
-            background-color: aqua;
-            grid-row: span 1;
-        }
-
-        /*  ---------------- */
-
-        /* top */
-        #top {
-            display: flex;
-
-            h1 {
-                flex-grow: 1;
-                margin: auto;
-
+            a {
+                color: #FFFFFF;
                 text-align: center;
+                line-height: 120px;
                 font-size: 52px;
                 font-family: '標楷體';
-                color: #FFFFFF;
+                text-decoration: none;
+                display: block;
 
+                /* 橫幅文字陰影 */
                 text-shadow: #333333 10px 10px 15px;
             }
         }
 
-        /* menu */
+        #marquee {
+            font-size: 19px;
+            font-family: '標楷體';
+            color: #0000FF;
+            line-height: 30px;
 
-        #menu {
-            display: flex;
-
-            a {
-                height: 100%;
-                flex-basis: 14.28%;
-                flex-grow: 1;
-                text-align: center;
-                text-decoration: none;
-                color: #000000;
-                background-color: #EEEEEE;
-
-                /* 讓他的字不要飄走 */
-                line-height: 25px;
-            }
-
-            a:hover {
-                background-color: #FFFF00;
-                color: #FF0000;
-                font-size: 14px;
-                font-weight: bold;
-                cursor: pointer;
-            }
+            background: url(images/0402.jpg);
+            background-position: 0px 0px;
         }
 
-        /* content */
         #content {
-            font-size: 14px;
-            color: #000000;
-            padding: 20px;
-
+            background: url(images/0402.jpg);
+            background-position: 0px -30px;
 
             iframe {
                 width: 100%;
@@ -112,29 +78,40 @@
             }
         }
 
-        /* fotter */
+        #footer {
+            background: #666600;
+            color: #FFFFFF;
+            font-family: '標楷體';
+            line-height: 2;
+            text-align: left;
+
+            a {
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+            a:visited {
+                color: #FF9999;
+            }
+        }
     </style>
 </head>
 
 <body>
     <main id="main">
         <div id="top">
-            <a href="index.html"><img src="images/logo.png" alt="運動廣場連結網" title="運動廣場連結網"></a>
-            <h1>運動廣場連結網</h1>
+            <a href="index.html">流行精品購物網站</a>
         </div>
-        <div id="menu">
-            <a href="results/main.html" target="content">首頁</a>
-            <a href="results/health.html" target="content">健康天地</a>
-            <a href="results/basketball.html" target="content">籃球介紹</a>
-            <a href="results/baseball.html" target="content">棒球介紹</a>
-            <a href="results/swimming.html" target="content">游泳介紹</a>
-            <a href="results/msgboard.html" target="content">訪客留言</a>
-            <a href="results/reference.html" target="content">資料來源</a>
+        <div id="marquee">
+            <marquee>大家來購物網！精品商品特價大拍賣！要買要快！</marquee>
         </div>
         <div id="content">
-            <iframe src="results/main.html" name="content" frameborder="0"></iframe>
+            <iframe src="results/main.html" frameborder="0" name="content"></iframe>
         </div>
-        <div id="footer"></div>
+        <div id="footer">
+            <a href="results/message.html" target="content">訪客留言版</a>
+            <p>網頁設計及維護：03許峻耀、近更新日期：2024/11/08</p>
+        </div>
     </main>
 </body>
 
