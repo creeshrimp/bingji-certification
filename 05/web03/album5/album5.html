@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>album5</title>
+    <script src="../jquery-2.1.4.min.js"></script>
 
     <style>
         * {
@@ -33,9 +34,13 @@
             width: 400px;
             height: 300px;
 
+            margin: auto;
+
             #display {
                 width: 100%;
                 height: 300px;
+
+                border: 5px solid #0000FF;
 
                 img {
                     display: block;
@@ -46,11 +51,17 @@
 
             #thumbnails {
                 display: flex;
+                justify-content: space-between;
+
+                padding: 1.5rem 0;
 
                 img {
                     display: block;
                     width: 60px;
                     height: 45px;
+
+                    border: 5px solid #0000FF;
+                    cursor: pointer;
                 }
             }
         }
@@ -61,16 +72,22 @@
     <h1>蘭嶼賞魚去</h1>
     <div id="album">
         <div id="display">
-            <img src="../images/0511a.jpg">
+            <img src="../images/0551.jpg">
         </div>
         <div id="thumbnails">
-            <img src="../images/0511a.jpg">
-            <img src="../images/0521a.jpg">
-            <img src="../images/0531a.jpg">
-            <img src="../images/0541a.jpg">
-            <img src="../images/0551a.jpg">
+            <img src="../images/0551.jpg">
+            <img src="../images/0552.jpg">
+            <img src="../images/0553.jpg">
+            <img src="../images/0554.jpg">
+            <img src="../images/0555.jpg">
         </div>
     </div>
+
+    <script>
+        $('#thumbnails').on('click', 'img', function () {
+            $('#display img').attr('src', $(this).attr('src'))
+        })
+    </script>
 </body>
 
 </html>
